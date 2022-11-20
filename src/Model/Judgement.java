@@ -17,7 +17,12 @@ public class Judgement {
         return result;
     }
 
-    public boolean hasPlace(List<Integer> computer, int placeNumber, List<Integer> player) { // 특정자리에 그 숫자가 있는지 확인해주는 메소드
-        return false;
+    public boolean hasPlace(List<Integer> computer, int placeIndex, int number
+    ) { // 특정 자리에 그 숫자가 있는지 확인해주는 메소드
+        return computer.get(placeIndex) == number;
+        // if(computer.get(placeIndex) == number){
+        //   return true; 같으면 true 다르면 false를 위와 같이 한줄로 줄일 수 있다.
+        // };
+        // return false;
     }
 }
