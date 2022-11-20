@@ -1,9 +1,7 @@
-package Model;
+package baseball.Model;
 
-import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class NumberGenerator { // 1.클래스 생성
     public List<Integer> createRandomNumbers() { // 2.정답이 될 랜덤 숫자 3개를 생성하는 메서드

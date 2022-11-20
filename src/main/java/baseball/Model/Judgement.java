@@ -1,4 +1,4 @@
-package Model;
+package baseball.Model;
 
 import java.util.List;
 
