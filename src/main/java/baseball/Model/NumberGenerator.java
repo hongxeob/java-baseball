@@ -10,7 +10,7 @@ public class NumberGenerator { // 1.클래스 생성
         // 만약 이미 존재하는 숫자면 담지 않음
         // 존재하지 않는 숫자만 담음.
         while (numberList.size() < 3) {
-            int number = (int) (Math.random() * 9 + 1);
+            int number = (int) (Math.random() * 9) + 1;
             if (numberList.contains(number)) {
                 continue;
             } else numberList.add(number);

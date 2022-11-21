@@ -1,25 +1,30 @@
 package baseball.Model;
 
 import java.util.List;
+import java.util.Set;
 
 public class Judgement {
-    public int correctCount(List<Integer> computer, List<Integer> player) { // 컴퓨터&플레이어의 각 숫자가 같은지 확인해주는 메소드
+    public int correctCount(List<Integer> computers, List<Integer> players) { // 컴퓨터&플레이어의 각 숫자가 같은지 확인해주는 메소드
         int result = 0; // 3
-        for (int i = 0; i < computer.size(); i++) { // 컴퓨터에 담겨있는 size만큼 반복
-            int playerNumber = player.get(i); // playerNumber는 매개변수 player에 i가 들어간 것
-            computer.contains(playerNumber); // player가 돌면서 computer에게 묻는다. 사용자가 입력한 값이 컴퓨터가 갖고 있는지
-            // List의 contains() 메소드는, List안에 같은 값이 있으면  true를, 없으면 false를 리턴합니다.
+//        for (int i = 0; i < players.size(); i++) {
+//            int player = players.get(i);
+//            if (computers.contains(player)) {
+//                result++;
+//            }
+//        }
+//        return result;
 
-            if (computer.contains(playerNumber)) { // 갖고 있다면
+        //위 코드를 아래처럼 바꿀 수 있다.
+        for (int player : players) {
+            if (computers.contains(player)) { // for(int i =0; i<players.length; i++
                 result++;
             }
         }
         return result;
     }
 
-    public boolean hasPlace(List<Integer> computer, int placeIndex, int number
-    ) { // 특정 자리에 그 숫자가 있는지 확인해주는 메소드
-        return computer.get(placeIndex) == number;
+    public boolean hasPlace(List<Integer> computers, int placeIndex, int number) {// 특정 자리에 그 숫자가 있는지 확인해주는 메소드
+        return computers.get(placeIndex) == number; // 컴퓨터의 배열 중 placeIndex번째 숫자가 = 넘버의 숫자랑 같으면 트루 다르면 펄스
         // if(computer.get(placeIndex) == number){
         //   return true; 같으면 true 다르면 false를 위와 같이 한줄로 줄일 수 있다.
         // };
